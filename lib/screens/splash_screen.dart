@@ -10,12 +10,21 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, 'homeScreen');
+    });
+    return const SafeArea(
+        child: Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
-        child: Text(
-          ""
-        )
+        child: Column(mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(image: AssetImage("assets/back_ground/name.png"),height: 100,),
+            Image(image: AssetImage("assets/back_ground/logo.png"),height: 70,),
+          ],
+        ),
       ),
-    ));
+    ),
+    );
   }
 }

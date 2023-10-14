@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import '../screens/home_screen.dart';
 
 Map<String, WidgetBuilder> screen_routes = {
-  '/': (context) => HomeScreen(),
-  'splashScreen': (context) => SplashScreen(),
+  '/': (context) => SplashScreen(),
+  'homeScreen': (context) => HomeScreen(),
   'postEditScreen': (context) => PostEditScreen(),
 };
